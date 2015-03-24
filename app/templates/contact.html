@@ -1,0 +1,25 @@
+<ion-view title="{{navTitle}}">
+  <ion-content class="content">
+    <div class="contact-wrapper">
+      <br>
+      <h1>DROP US A LINE!</h1>
+      <p>Feel free to contact us if anything is bugging you or just ask us something.</p>
+    	<br>
+    	<label class="item item-input">
+        <input type="text" placeholder="Name">
+      </label>
+      <br>
+      <label class="item item-input">
+        <input type="email" placeholder="Email">
+      </label>
+      <br>
+      <label class="item item-input">
+        <textarea ng-keypress="updateEditor()" ng-model="bar"  placeholder="Message"> </textarea>
+      </label>
+      <br>
+      <a href class="button button-large button-positive right">
+        <h4>SUBMIT</h4>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
