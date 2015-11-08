@@ -1,25 +1,45 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
+<style type="text/css">
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #abc7d4 !important;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color: #abc7d4 !important;
+     opacity: 1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color: #abc7d4 !important;
+     opacity: 1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+     color: #abc7d4 !important;
+  }
+  .scroll {position: absolute; bottom: 0; width: 100%;}
+</style>
+
+<ion-view hide-nav-bar="true" class="blue-bg">
   <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
-    </form>
+      <form class="fixed-b" ng-submit="doLogin()">
+        <div class="list">
+          <label class="item item-input item-no-bg">
+            <input class="color-white" placeholder="Google Login" type="text">
+          </label>
+          <label class="item item-input item-no-bg">
+            <input class="color-white" placeholder="Facebook Login" type="text">
+          </label>
+          <label class="item item-input item-no-bg">
+            <input class="color-white" placeholder="Email Login" type="text">
+          </label>        
+          <label class="item item-no-bg item-center">
+            <paper-button class="button-normal" raised>JUST BROWSE THE LIBRARY</paper-button>
+          </label>
+        </div>
+      </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
+
+<!-- <label class="item item-input item-no-bg">
+  <input class="color-white" placeholder="Value" type="text" ng-model="loginData.username">
+</label>
+<label class="item item-input item-no-bg">
+  <input class="color-white" type="password" ng-model="loginData.password">
+</label> -->

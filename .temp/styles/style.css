@@ -58,9 +58,20 @@ h3 {font-family: 'ostrich_sansblack' !important; font-size: 1.4em !important; co
 h4 {font-family: 'ostrich_sansblack' !important; font-size: 1.2em !important; color: #fff;}
 p {font-family: 'Exo 2', sans-serif !important; margin-bottom: 1em !important; font-weight: 200; font-size: 1.2em; line-height: 1.2em; color: #4D4D4D !important;}
 
+.blue-bg {background-image: url(images/landing-bg.jpg); background-size: 100% 100%; background-repeat: no-repeat;}
 .center {display: inline-block; text-align: center; width: 100%}
 .clear {clear: both;}
 .right {float: right; width: 60%}
+
+.color-white {color: white !important}
+/*.fixed-b {position: fixed; width: 100%; bottom: 0;}*/
+
+.item {border: none}
+.item-center {text-align: center}
+.item-input {height: 4em; border-bottom: 1px #67a4b5 solid !important}
+.item-no-bg {background-color: transparent !important;}
+
+.button-normal {background-color: #ff5d6a; color: white;}
 
 .menu-bg {background-color: #4D4D4D !important}
 .item-complex .item-content {background-color: #4D4D4D !important}
