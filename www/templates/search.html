@@ -1,0 +1,114 @@
+<ion-view title="{{navTitle}}">
+	<ion-content class="content" ng-controller="SearchController as search">
+		<br>
+		<h1>
+			START SEARCHING!
+		</h1>
+		<p>
+			Search our library for a book or article by typing a keyword.
+		</p>
+		<br>
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" ng-model="searchinput" placeholder="Search">
+		</label>
+		
+		<!-- <div ng-controller="BookController as item" ng-show="searchinput">
+			<br>
+			<p>
+				Books found: {{(books | filter:searchinput).length}}
+			</p>
+			<p>
+				Articles found: {{(articles | filter:searchinput).length}}
+			</p>
+			<h1>
+				BOOKS
+			</h1>
+			<div ng-show="(books | filter:searchinput).length == 0">
+				<p>Sorry! No books match your input.</p>
+			</div>  		
+			<div class="row responsive-sm" ng-repeat="book in books | filter:searchinput">
+						 
+				<div class="col lib-item">
+					<div class="lib-img-wrapper">
+						<img height="100%" src="images/books/{{book.bookCov}}" alt="">
+					</div>
+					<br>
+					<p class="lib-head">{{book.bookName}}</p>
+					<p>
+						<b>Author:</b> {{book.bookAuth | limitTo: 25}}...<br>
+						<b>Publisher:</b> {{book.bookPub | limitTo: 25}}...<br>
+						<b>ISBN:</b> {{book.bookIsbn}}<br><br>
+					</p>   
+					<a href="#/app/single-book" ng-click="item.setItem(book)" class="button button-large button-positive lib-item-button-des"> 
+						<h4>MORE INFO</h4>
+					</a>
+					<a href class="button button-large button-positive lib-item-button-down"> 
+						<h4>DOWNLOAD</h4>
+					</a>
+				</div>
+			</div>      
+		</div> -->
+		<div ng-controller="ArticleController as item" ng-show="searchinput">
+			<div ng-controller="BookController as item" ng-show="searchinput">
+				<br>
+				<p>
+					Books found: {{(books | filter:searchinput).length}}
+				</p>
+				<p>
+					Articles found: {{(articles | filter:searchinput).length}}
+				</p>
+				<h1>
+					BOOKS
+				</h1>
+				<div ng-show="(books | filter:searchinput).length == 0">
+					<p>Sorry! No books match your input.</p>
+				</div>  		
+				<div class="row responsive-sm" ng-repeat="book in books | filter:searchinput">
+							 
+					<div class="col lib-item">
+						<div class="lib-img-wrapper">
+							<img height="100%" src="images/books/{{book.bookCov}}" alt="">
+						</div>
+						<br>
+						<p class="lib-head">{{book.bookName}}</p>
+						<p>
+							<b>Author:</b> {{book.bookAuth | limitTo: 25}}...<br>
+							<b>Publisher:</b> {{book.bookPub | limitTo: 25}}...<br>
+							<b>ISBN:</b> {{book.bookIsbn}}<br><br>
+						</p>   
+						<a href="#/app/single-book" ng-click="item.setItem(book)" class="button button-large button-positive lib-item-button-des"> 
+							<h4>MORE INFO</h4>
+						</a>
+						<a href class="button button-large button-positive lib-item-button-down"> 
+							<h4>DOWNLOAD</h4>
+						</a>
+					</div>
+				</div>      
+			</div>
+			<br>
+			<h1>
+				ARTICLES
+			</h1> 
+			<div ng-show="(articles | filter:searchinput).length == 0">
+				<p>Sorry! No articles match your input</p>
+			</div>		
+			<div class="row responsive-sm" ng-repeat="article in articles | filter:searchinput">
+				<div class="col lib-item">
+					<br>
+					<p class="lib-head">{{article.articleName}}</p>
+					<p>
+						<b>Author:</b> {{article.articleAuth | limitTo: 25}}...<br>
+						<b>Source:</b> {{article.articleSrc | limitTo: 25}}...<br><br>
+					</p>   
+					<a href="#/app/single-article" ng-click="item.setItem(article)" class="button button-large button-positive lib-item-button-des"> 
+						<h4>MORE INFO</h4>
+					</a>
+					<a href class="button button-large button-positive lib-item-button-down"> 
+						<h4>DOWNLOAD</h4>
+					</a>
+				</div>
+			</div>      
+		</div>
+	</ion-content>
+</ion-view>

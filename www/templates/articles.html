@@ -1,0 +1,24 @@
+<ion-view title="{{navTitle}}">
+  <ion-content class="content" has-bouncing="true">
+    <div ng-controller="ArticleController as item">
+      <!-- <p>hello{{item.currentId}}</p> -->
+      <div class="row responsive-sm" ng-repeat="article in articles">
+        <div class="col lib-item">
+          <br>
+          <p class="lib-head">{{article.articleName}}</p>
+          <!-- <p><b>Category:</b> {{book.bookCat}}<br> -->
+          <p>
+            <b>Author:</b> {{article.articleAuth | limitTo: 25}}...<br>
+            <b>Source:</b> {{article.articleSrc | limitTo: 25}}...<br><br>
+          </p>   
+          <a href="#/app/single-article" ng-click="item.setItem(article)" class="button button-large button-positive lib-item-button-des"> 
+            <h4>MORE INFO</h4>
+          </a>
+          <a href class="button button-large button-positive lib-item-button-down"> 
+            <h4>DOWNLOAD</h4>
+          </a>
+        </div>
+      </div>      
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+<ion-view title="{{navTitle}}">
+  <ion-content class="content" has-bouncing="true">
+    <div class="single-item-wrapper" ng-controller="ArticleController as item">   
+      <p class="lib-head">{{item.currentItem.articleName}}</p>
+      <p>
+        <b>Author:</b><br> {{item.currentItem.articleAuth}}<br>
+        <b>Source:</b><br> {{item.currentItem.articleSrc}}<br><br>
+        <b>Abstract:</b><br> {{item.currentItem.articleAbstr}}<br><br>
+      </p>
+      <a href class="button button-large button-positive right"> 
+        <h4>DOWNLOAD BOOK</h4>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </ion-content>
+</ion-view>

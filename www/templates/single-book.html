@@ -1,0 +1,19 @@
+<ion-view title="{{navTitle}}">
+  <ion-content class="content" has-bouncing="true">
+    <div class="single-item-wrapper" ng-controller="BookController as item">      
+      <img width="60%" src="images/books/{{item.currentItem.bookCov}}" alt="">
+      <br><br>     
+      <p class="lib-head">{{item.currentItem.bookName}}</p>
+      <p>
+        <b>Author:</b><br> {{item.currentItem.bookAuth}}<br>
+        <b>Publisher:</b><br> {{item.currentItem.bookPub}}<br>
+        <b>ISBN:</b><br> {{item.currentItem.bookIsbn}}<br><br>
+        <b>Description:</b><br> {{item.currentItem.bookDes}}<br><br>
+      </p>
+      <a href class="button button-large button-positive right"> 
+        <h4>DOWNLOAD BOOK</h4>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </ion-content>
+</ion-view>
